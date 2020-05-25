@@ -20,6 +20,22 @@ npm install react-native-animated-gallery-view
 Gallery view can get any views as items (passed as children).
 Set a reg to the GalleryView instance in order to access and use the provided method setLayout which allows you to transition between different gallery layouts (see code example below)
 
+### props
+
+- layout: The initial layout for the gallery. Defaults to 'row'
+
+- spacing: The amount of space to have betwen items. Defaults to 5
+
+- itemStyle: Additional styles or override default styles for each gallery item
+
+- style: Additional styles or styles to override default style for all layout modes. This will be overriden by the more specific style props: columnLayoutStyle, rowLayoutStyle, wrapLayoutStyle
+
+- columnLayoutStyle: Additional style or override styles when gallery is in column mode
+
+- rowLayoutStyle: Additional style or override styles when gallery is in row mode
+
+- wrapLayoutStyle: Additional style or override styles when gallery is in wrap mode
+
 ```js
 import React, { useRef } from 'react';
 import { StyleSheet, View, Button } from 'react-native';

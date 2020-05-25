@@ -102,7 +102,7 @@ const GalleryView = React.forwardRef<GalleryViewProps, any>(
     if (currentLayout === GalleryLayout.Row)
       providedLayoutStyle = rowLayoutStyle;
 
-    if (currentLayout === GalleryLayout.Wrap)
+    if (currentLayout === GalleryLayout.RowWrap)
       providedLayoutStyle = wrapLayoutStyle;
 
     return (
@@ -128,6 +128,8 @@ const GalleryView = React.forwardRef<GalleryViewProps, any>(
               style: childStyle,
               key: `galleryItem${index}`,
             });
+          } else {
+            return null;
           }
         })}
       </Transitioning.View>
