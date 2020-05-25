@@ -1,9 +1,3 @@
-import { NativeModules } from 'react-native';
+import GalleryView, { GalleryLayout, GalleryViewProps } from './GalleryView';
 
-type AnimatedGalleryViewType = {
-  multiply(a: number, b: number): Promise<number>;
-};
-
-const { AnimatedGalleryView } = NativeModules;
-
-export default AnimatedGalleryView as AnimatedGalleryViewType;
+export { GalleryView, GalleryLayout, GalleryViewProps };
